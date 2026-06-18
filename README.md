@@ -51,6 +51,8 @@ The first agent always gets the corrupted/jailbreak instruction — it's the onl
 
 So one full "cluster" works like this: using the ethical identity card, the test runs 5 times with a 3-agent team, and 5 times with a 5-agent team. Then the exact same thing is repeated using the other identity card instead.
 
+You can also (and you should) check the RESULTS.md file (look at the top of this repo!) and have a look at the visual chart as well.
+
 ## Honest Scope and Limitations
 
 This is a small-scale exploratory study, not a definitive result: 5 trials per condition, one model family, one jailbreak framing ("hypothetical security research" framing), and manual rather than automated scoring. The goal was to establish whether this phenomenon is observable at all and worth studying further — not to produce a statistically airtight claim. Future extensions (more trials, more models, automated classification) are discussed in the Future Work section below.
