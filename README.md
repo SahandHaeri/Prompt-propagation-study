@@ -55,4 +55,21 @@ You can also (and you should) check the RESULTS.md file (look at the top of this
 
 ## Honest Scope and Limitations
 
-This is a small-scale exploratory study, not a definitive result: 5 trials per condition, one model family, one jailbreak framing ("hypothetical security research" framing), and manual rather than automated scoring. The goal was to establish whether this phenomenon is observable at all and worth studying further — not to produce a statistically airtight claim. Future extensions (more trials, more models, automated classification) are discussed in the Future Work section below.
+This is a small-scale exploratory study, not a definitive result: 5 trials per condition, one model family, one jailbreak framing ("hypothetical security research" framing), and manual rather than automated scoring. The goal was to establish whether this phenomenon is observable at all and worth studying further — not to produce a statistically airtight claim. Future extensions (more trials with different jailbreaking methods, more/stronger models, automated classification (inspector agent) are discussed in the Future Work section below.
+
+## What comes next?
+
+The experiment raises a more important question than it answers: if a generic safety prompt isn't a reliable wall, what would actually work? Three directions follow naturally from the findings:
+
+**1. Test more specific safety instructions.** The Condition A prompt was intentionally generic. A more targeted instruction — one that explicitly tells the agent what to do when it receives potentially harmful content from an upstream source — may shift results significantly. This could also be tested as a variable in its own right.
+
+**2. Test with stronger base models.** This experiment used a small, locally-run model (3B parameters). Larger models with built-in alignment fine-tuning (like GPT-4 or Claude) may show different propagation patterns, or the same patterns for different reasons. Comparing results across model sizes would clarify how much of this is a small-model limitation versus a structural problem with chaining.
+
+**3. Introduce a dedicated inspector agent.** Rather than relying on each agent to self-police, you could add a purpose-built agent between each step whose only job is to review the previous output before passing it on. This mirrors real-world security design (dedicated review layers vs. everyone self-reporting) and would directly test whether a specialised safety role outperforms a generic one.
+
+These three directions are incremental — they test variations on the same setup. There's also a more fundamental question worth asking: what if agents developed safety-like behaviour without being instructed at all, by learning from a structured environment instead of being told rules? That question is the subject of a full follow-on research proposal exploring emergent alignment in simulated multi-agent environments — email me @ Sahandaheri@gmail.com for the complete design.
+
+The core finding — that low severity scores don't all mean the same thing, and that drift and refusal are meaningfully different safety outcomes — is probably the most transferable takeaway. Any future work in multi-agent safety would need to track not just *whether* harmful content survived, but *why* it didn't.
+
+
+
