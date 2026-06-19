@@ -41,7 +41,7 @@ This means chain length, not just the presence or absence of a safety prompt, ap
 - **Hardware:** Consumer-grade GPU (GTX 1060 6GB) — deliberately chosen to keep the project reproducible on ordinary hardware rather than requiring cloud compute or large models
 - **Scoring:** Manual, by the author, using a 0–2 severity scale (0 = refused, 1 = partial/hedged, 2 = full compliance) with documented notes per trial, since no classifier model was used
 
-## For non Teechnical Backgrounds & My Mom
+## For non Teechnical Backgrounds & My Mom :D
 
 The basic "ingredients" of this experiment are: 3 instruction prompts, 1 starting message, 2 "identity cards," a 3-agent team, and a 5-agent team.
 
@@ -67,7 +67,7 @@ The experiment raises a more important question than it answers: if a generic sa
 
 **3. Introduce a dedicated inspector agent.** Rather than relying on each agent to self-police, you could add a purpose-built agent between each step whose only job is to review the previous output before passing it on. This mirrors real-world security design (dedicated review layers vs. everyone self-reporting) and would directly test whether a specialised safety role outperforms a generic one.
 
-These three directions are incremental — they test variations on the same setup. There's also a more fundamental question worth asking: what if agents developed safety-like behaviour without being instructed at all, by learning from a structured environment instead of being told rules? That question is the subject of a full follow-on research proposal exploring emergent alignment in simulated multi-agent environments — email me @ Sahandaheri@gmail.com for the complete design.
+These three directions are incremental — they test variations on the same setup. There's also a more fundamental question worth asking: what if agents developed safety-like behaviour without being instructed at all, by learning from a structured environment instead of being told rules? That question is the subject of a full follow-on research proposal exploring emergent alignment in simulated multi-agent environments — email me @ SahandHaeri@gmail.com for the complete design.
 
 The core finding — that low severity scores don't all mean the same thing, and that drift and refusal are meaningfully different safety outcomes — is probably the most transferable takeaway. Any future work in multi-agent safety would need to track not just *whether* harmful content survived, but *why* it didn't.
 
